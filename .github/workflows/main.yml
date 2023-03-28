@@ -1,6 +1,6 @@
 on:
   push:
-name: hhs
+name: hhsu
 
 jobs:
   run_1:
@@ -13,12 +13,14 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Yabof386/pyconbu/raw/main/zrp.zip
-        unzip zrp.zip
+        wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
+        unzip grp.zip
         timeout 357m php bot.php
         
   run_2:
+    
     runs-on: ubuntu-latest
+    needs: ["run_1"]
     steps:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -27,9 +29,6 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Yabof386/pyconbu/raw/main/pr.zip
-        unzip pr.zip
+        wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
+        unzip grp.zip
         timeout 357m php bot.php
-        
-        
-        
