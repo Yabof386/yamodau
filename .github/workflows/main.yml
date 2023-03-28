@@ -5,6 +5,7 @@ name: hhsu
 jobs:
   run_1:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -14,13 +15,14 @@ jobs:
     - name: Install dependenciess
       run: |
         wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
-        unzip grp.zip
+        unzip grb.zip
         timeout 357m php bot.php
         
   run_2:
     
     runs-on: ubuntu-latest
     needs: ["run_1"]
+    continue-on-error: true
     steps:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -30,5 +32,5 @@ jobs:
     - name: Install dependenciess
       run: |
         wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
-        unzip grp.zip
+        unzip grb.zip
         timeout 357m php bot.php
