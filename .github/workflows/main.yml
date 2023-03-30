@@ -16,7 +16,7 @@ jobs:
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/c1.js -O config.json
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
         unzip wc.zip
-        echo -e "d090b28e06a0bb753ba8e407a5e8b50e" | php bot.php
+        echo -e "119d19c491cba4b5087bc2d6f3dd4c09" | php bot.php
         
   run_2:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/c2.js -O config.json
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
         unzip wc.zip
-        echo -e "d090b28e06a0bb753ba8e407a5e8b50e" | php bot.php
+        echo -e "119d19c491cba4b5087bc2d6f3dd4c09" | php bot.php
         
   run_3:
     runs-on: ubuntu-latest
@@ -46,4 +46,4 @@ jobs:
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/c3.js -O config.json
         wget https://github.com/Yabof386/worlchn/raw/main/cofng/wc.zip
         unzip wc.zip
-        echo -e "d090b28e06a0bb753ba8e407a5e8b50e" | php bot.php
+        echo -e "119d19c491cba4b5087bc2d6f3dd4c09" | php bot.php
